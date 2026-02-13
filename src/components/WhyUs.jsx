@@ -1,4 +1,4 @@
-import heroImg from "../assets/img/bg-benzene.png";
+// import heroImg from "../assets/img/bg-benzene.png";
 export default function WhyUs()
 {
      const WhyUs = [
@@ -30,7 +30,8 @@ export default function WhyUs()
   ];
 
   return(
-     <section className="min-h-screen px-6 py-16 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${heroImg})`}}>
+     <section className="px-2 py-16 bg-center bg-cover bg-no-repeat bg-gray-200">
+    {/*  style={{ backgroundImage: `url(${heroImg})`}} */}
 
       {/* Heading */}
       <h1
@@ -41,30 +42,36 @@ export default function WhyUs()
       </h1>
 
        {/* Cards */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {WhyUs.map((item) => (
-          <div
-            key={item.title}
-            className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
-            transition duration-300 p-5"
-          >
-            {/* icon  */}
-            <img
-              src={item.icon}
-              alt={item.title}
-              className="rounded-l w-500 h-300 object-cover"
-            />
+       <div
+  key={item.title}
+  className="group bg-white/80 backdrop-blur-sm rounded-xl 
+  shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1
+  p-4 flex flex-col items-center text-center"
+>
+  {/* Icon */}
+  <div className="w-16 h-16 flex items-center justify-center mb-3 
+      transition-transform duration-300 group-hover:scale-110">
+    <img
+      src={item.icon}
+      alt={item.title}
+      className="w-full h-full object-contain"
+    />
+  </div>
 
-           {/* Title */}
-            <h3 className="text-l font-semibold mb-4 text-gray-900 font-merri text-center">
-              {item.title}
-            </h3>
+  {/* Title */}
+  <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-2 leading-tight">
+    {item.title}
+  </h3>
 
-            {/* Description */}
-            <p className="text-sm text-gray-600 leading-relaxed text-center">
-              {item.desc}
-            </p>
-          </div>
+  {/* Description */}
+  <p className="text-xs md:text-sm text-gray-600 leading-snug line-clamp-4">
+    {item.desc}
+  </p>
+</div>
+
+
         ))}
       </div>
     </section>

@@ -113,7 +113,7 @@ Delhi-110089
 
             <div className="flex gap-4 mt-5">
               <SocialIcon Icon={Facebook} link="https://www.facebook.com/share/1AWdeaWFAX/" />
-              <SocialIcon Icon={Instagram} link="https://www.instagram.com/sahara_ortho" />
+              <SocialIcon Icon={Instagram} link="https://www.instagram.com/sahara_ortho?igsh=bm84c3B1eTB6d3kw" />
               <SocialIcon Icon={Linkedin} link="https://in.linkedin.com/in/sahara-ortho-65a6a9266" />
               <SocialIcon Icon={Youtube} link="https://youtube.com/@orthopaediciansuresh2137" />
             </div>

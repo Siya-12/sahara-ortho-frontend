@@ -4,7 +4,7 @@ import brochurePdf from "../assets/saharaortho_catalogue.pdf";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden">
 
       {/* Background */}
       <div

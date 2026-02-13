@@ -7,13 +7,14 @@ import { Outlet } from "react-router-dom";
 const MainLayout = ({ children }) => {
   return (
     <>
-      <Topbar />
-      <Navbar />
-      
-      <main className="pt-[150px]">
-        {children}
-         <Outlet />
-      </main>
+      <div className="top-0 left-0 w-full z-50 bg-white">
+        <Topbar />
+        <Navbar />
+      </div>
+        <main className="mt-[2px] md:mt-[10px]">
+          {children}
+          <Outlet />
+        </main>
 
       <Footer />
       

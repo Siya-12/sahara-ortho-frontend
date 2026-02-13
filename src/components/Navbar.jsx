@@ -65,16 +65,17 @@ const productsMenu = [
 
   return (
     <>
-      <nav className="bg-white shadow fixed top-[40px] z-40 left-0 w-full">
+      <nav className="bg-white shadow w-full">
+
         {/* Main bar */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 md:py-3 flex items-center justify-between">
 
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img
               src={logo}
               alt="Sahara Ortho Logo"
-              className="h-14 sm:h-16 w-auto object-contain"
+              className="h-10 md:h-9 w-auto object-contain"
             />
           </Link>
 
@@ -139,7 +140,7 @@ const productsMenu = [
 
             <button
               onClick={() => setOpenEnquiry(true)}
-              className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-500 transition whitespace-nowrap"
+              className="bg-red-600 text-white px-4 py-1 md:py-1.5 text-sm rounded-full hover:bg-red-500 transition whitespace-nowrap"
             >
               Make an Appointment
             </button>
@@ -150,15 +151,24 @@ const productsMenu = [
             onClick={() => {setOpen(!open); 
               setMobileProductsOpen(false);
               setActiveMobileProduct(null);}}
-            className="md:hidden text-2xl text-gray-700 bg-white"
+            className="md:hidden text-sm text-gray-700 bg-white"
           >
-            ☰
+            <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-5 w-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+  
           </button>
         </div>
 
         {/* Mobile Dropdown */}
         {open && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
+          <div className="md:hidden absolute left-0 w-full bg-white shadow-lg z-50">
             <ul className="flex flex-col gap-4 px-6 py-6 font-medium text-gray-700">
               <li>
                 <Link to="/" onClick={() => setOpen(false)}>Home</Link>
@@ -171,7 +181,7 @@ const productsMenu = [
              <li>
   <button
     onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-    className="w-full flex justify-between items-center"
+    className="w-full flex justify-between items-center bg-white"
   >
     Products
     <span>{mobileProductsOpen ? "−" : "+"}</span>
@@ -187,10 +197,10 @@ const productsMenu = [
                 activeMobileProduct === idx ? null : idx
               )
             }
-            className="w-full flex justify-between items-center"
+            className="w-full flex justify-between items-center bg-white"
           >
             {product.name}
-            <span>{activeMobileProduct === idx ? "−" : "+"}</span>
+            {/* <span>{activeMobileProduct === idx ? "−" : "+"}</span> */}
           </button>
 
           {activeMobileProduct === idx && (

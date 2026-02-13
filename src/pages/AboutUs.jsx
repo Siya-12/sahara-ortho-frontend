@@ -1,4 +1,5 @@
 import AboutBg from "../assets/img/bg-about.jpg";
+import About1 from "../assets/img/about1.jpeg"; 
 export default function AboutUs() {
   return (
     <section className="bg-[#eaf6fb] py-20 bg-no-repeat bg-center bg-cover"style={{ backgroundImage:`url(${AboutBg})`}}>
@@ -38,14 +39,7 @@ export default function AboutUs() {
         {/* Row 2 */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="md:order-2">
-           <video
-  src="/videos/vdo2.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full h-full object-cover rounded-xl"
-/>
+          <img src={About1} alt="" className="rounded-xl h-50 md:h-50 w-auto object-contain"/>
           </div>
 
           <div className="md:order-1">

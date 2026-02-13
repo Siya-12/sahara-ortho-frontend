@@ -1,7 +1,7 @@
 export default function TopBar() {
   return (
-    <div className="bg-gradient-to-br from-blue-600 via-blue-900 to-blue-400 text-white text-sm fixed top-0 left-0 w-full z-50">
-      <div className="w-full px-6 lg:px-10 py-2">
+    <div className="bg-gradient-to-br from-blue-600 via-blue-900 to-blue-400 text-white text-sm h-12 md:h-10 w-full flex items-center">
+<div className="w-full px-6 lg:px-10 py-2">
 
         {/* ================= DESKTOP / TABLET (UNCHANGED) ================= */}
         <div className="hidden md:flex md:items-center md:justify-between gap-2">
@@ -33,7 +33,7 @@ export default function TopBar() {
             <a href="https://in.linkedin.com/in/sahara-ortho-65a6a9266" target="_blank" className="hover:opacity-80 transition">
               <i className="text-white bi bi-linkedin"></i>
             </a>
-            <a href="https://www.instagram.com/sahara_ortho" target="_blank" className="hover:opacity-80 transition">
+            <a href="https://www.instagram.com/sahara_ortho?igsh=bm84c3B1eTB6d3kw" target="_blank" className="hover:opacity-80 transition">
               <i className="text-white bi bi-instagram"></i>
             </a>
             <a href="https://www.facebook.com/share/1AWdeaWFAX/" target="_blank" className="hover:opacity-80 transition">

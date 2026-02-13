@@ -1,4 +1,4 @@
-import CertBg from "../assets/img/bg-cert.png";
+// import CertBg from "../assets/img/bg-cert.png";
 
 export default function Certification() {
   const certificates = [
@@ -17,7 +17,7 @@ export default function Certification() {
   ];
 
   return (
-    <section className="min-h-[60vh] md:min-h-screen bg-gradient-to-br from-slate-200 to-cyan-100 px-6 py-8 md:py-16" style={{ backgroundImage:`url(${CertBg})`}}>
+    <section className="min-h-[60vh] md:min-h-screen bg-gradient-to-br from-slate-200 to-white px-6 py-8 md:py-16">
       
       {/* Heading */}
       <h1
