@@ -1,6 +1,6 @@
 import heroImg from "../assets/img/2.png";
 import { Link } from "react-router-dom";
-import brochurePdf from "../assets/brochure.pdf";
+import brochurePdf from "../assets/saharaortho_catalogue.pdf";
 
 export default function Hero() {
   return (

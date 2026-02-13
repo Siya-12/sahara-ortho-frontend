@@ -12,7 +12,7 @@ export default function BrochureCTA() {
 
         {/* Button */}
         <a
-  href="../src/assets/brochure.pdf"
+  href="../src/assets/saharaortho_catalogue.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-300 hover:bg-black hover:text-white"
