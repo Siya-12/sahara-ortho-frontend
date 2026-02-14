@@ -181,7 +181,7 @@ const productsMenu = [
              <li>
   <button
     onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-    className="w-full flex justify-between items-center"
+    className="w-full flex justify-between items-center bg-white"
   >
     Products
     <span>{mobileProductsOpen ? "−" : "+"}</span>
