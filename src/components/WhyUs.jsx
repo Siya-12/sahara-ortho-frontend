@@ -51,7 +51,7 @@ export default function WhyUs()
   p-4 flex flex-col items-center text-center"
 >
   {/* Icon */}
-  <div className="w-16 h-16 flex items-center justify-center mb-3 
+  <div className="w-38 h-16 flex items-center justify-center mb-3 
       transition-transform duration-300 group-hover:scale-110">
     <img
       src={item.icon}

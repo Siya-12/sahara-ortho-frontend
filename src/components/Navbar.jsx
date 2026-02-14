@@ -181,52 +181,32 @@ const productsMenu = [
              <li>
   <button
     onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-    className="w-full flex justify-between items-center bg-white"
+    className="w-full flex justify-between items-center"
   >
     Products
     <span>{mobileProductsOpen ? "−" : "+"}</span>
   </button>
 
   {mobileProductsOpen && (
-    <ul className="mt-2 ml-4 space-y-2">
+    <ul className="mt-2 ml-4 space-y-3">
       {productsMenu.map((product, idx) => (
         <li key={idx}>
-          <button
-            onClick={() =>
-              setActiveMobileProduct(
-                activeMobileProduct === idx ? null : idx
-              )
-            }
-            className="w-full flex justify-between items-center bg-white"
+          <Link
+            to={`/products/${product.value}`}
+            onClick={() => {
+              setOpen(false);
+              setMobileProductsOpen(false);
+            }}
+            className="block py-1 hover:text-primary"
           >
             {product.name}
-            {/* <span>{activeMobileProduct === idx ? "−" : "+"}</span> */}
-          </button>
-
-          {activeMobileProduct === idx && (
-            <ul className="ml-4 mt-2 space-y-1">
-              {product.subsections.map((sub, i) => (
-                <li key={i}>
-                  <Link
-                    to={`/products/${product.name}/${sub}`}
-                    onClick={() => {
-                      setOpen(false);
-                      setMobileProductsOpen(false);
-                      setActiveMobileProduct(null);
-                    }}
-                    className="block py-1"
-                  >
-                    {sub}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          </Link>
         </li>
       ))}
     </ul>
   )}
 </li>
+
 
               <li>
                 <Link to="/certifications" onClick={() => setOpen(false)}>Certifications</Link>

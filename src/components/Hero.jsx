@@ -4,11 +4,11 @@ import brochurePdf from "../assets/saharaortho_catalogue.pdf";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[85vh] w-full overflow-hidden">
 
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-top"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         <div className="absolute inset-0 bg-white/65" />
@@ -46,7 +46,7 @@ self-center lg:self-start
 
   {/* Heading */}
   <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight order-1 lg:order-2">
-    Fixing fractures, Restoring futures
+    Fixing Fractures, Restoring Futures
   </h1>
 
   {/* Paragraph */}
@@ -102,7 +102,7 @@ self-center lg:self-start
     <h4 className="font-semibold text-gray-800">
       {item.title}
     </h4>
-    <p className="text-sm text-gray-600 mt-2">
+    <p className="text-sm text-gray-600 mt-2 ">
       {item.desc}
     </p>
   </div>

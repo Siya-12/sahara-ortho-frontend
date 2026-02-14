@@ -1,85 +1,64 @@
-import AboutBg from "../assets/img/bg-about.jpg";
-import About1 from "../assets/img/about1.jpeg"; 
+import About1 from "../assets/img/About1.jpeg";
+import About2 from "../assets/img/About2.jpeg";
+import About3 from "../assets/img/About3.jpeg";
+import About4 from "../assets/img/About4.jpeg";
+
 export default function AboutUs() {
+  const images = [About1, About2, About3, About4];
+
   return (
-    <section className="bg-[#eaf6fb] py-20 bg-no-repeat bg-center bg-cover"style={{ backgroundImage:`url(${AboutBg})`}}>
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-5 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-14
-         bg-clip-text text-transparent font-changa
-    bg-gradient-to-r from-green-800 via-teal-900 to-red-900
-    bg-clip-border text-cyan">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-6 md:mb-14
+         bg-clip-text font-changa text-transparent 
+         bg-gradient-to-r from-gray-400 via-gray-800 to-gray-400 bg-clip-border">
           ABOUT US
         </h2>
-        {/* Row 1 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <video
-  src="/videos/vdo1.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full h-full object-cover rounded-xl"
-/>
 
+        {/* Video */}
+        <div className="flex justify-center mb-12">
+  <div className="w-full md:w-3/4 aspect-video">
+    <video
+      src="/videos/vdo1.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-full object-cover rounded-2xl shadow-2xl"
+    />
+  </div>
+</div>
 
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Excellence in Orthopaedic Solutions
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Sahara Ortho is dedicated to delivering high-quality orthopaedic
-              implants and instruments that meet global standards. Our focus
-              is on precision, durability, and patient safety.
-            </p>
-          </div>
+        {/* Company Description */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-gray-700 text-2xl leading-relaxed text-bold ">
+            Sahara Ortho is a trusted manufacturer of high-quality orthopaedic 
+            implants and instruments. Since 2005, we have focused on precision 
+            engineering, strict quality standards, and continuous innovation 
+            to support surgeons and improve patient outcomes worldwide.
+          </p>
         </div>
 
-        {/* Row 2 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div className="md:order-2">
-          <img src={About1} alt="" className="rounded-xl h-50 md:h-50 w-auto object-contain"/>
-          </div>
-
-          <div className="md:order-1">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Advanced Manufacturing
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              With modern manufacturing techniques and strict quality control,
-              we ensure each product delivers reliability and long-term
-              performance for surgeons and patients.
-            </p>
-          </div>
+        {/* Image Cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-8">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden 
+                         transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src={img}
+                alt={`About ${index + 1}`}
+                className="w-full h-74 object-cover"
+              />
+            </div>
+          ))}
         </div>
 
-        {/* Row 3
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-         <video
-  src="/videos/vdo3.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full h-full object-cover rounded-xl"
-/>
-
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Trusted by Professionals
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Our products are trusted by orthopaedic surgeons across the
-              country. We continuously innovate to support better surgical
-              outcomes and faster patient recovery.
-            </p>
-          </div>
-        </div>*/}
-
-      </div> 
+      </div>
     </section>
   );
 }
-
- 

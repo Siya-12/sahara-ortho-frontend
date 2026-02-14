@@ -1,27 +1,29 @@
-// import CertBg from "../assets/img/bg-cert.png";
+import ceImg from "../assets/img/certificates/ce.jpg";
+import fdaImg from "../assets/img/certificates/fda.jpg";
+import isoImg from "../assets/img/certificates/iso.jpg";
 
 export default function Certification() {
   const certificates = [
     {
-      img: "../src/assets/img/certificates/iso.jpg",
+      img: isoImg,
       title: "ISO 13485 Certification of Compliance",
     },
     {
-      img: "../src/assets/img/certificates/ce.jpg",
+      img: ceImg,
       title: "CE Certification of Compliance",
     },
     {
-      img: "../src/assets/img/certificates/fda.jpg",
+      img: fdaImg,
       title: "FDA Certification of Compliance",
     },
   ];
 
   return (
-    <section className="min-h-[60vh] md:min-h-screen bg-gradient-to-br from-slate-200 to-white px-6 py-8 md:py-16">
+    <section className="min-h-[60vh] md:min-h-screen bg-gradient-to-br from-slate-200 to-white px-5 py-8">
       
       {/* Heading */}
       <h1
-        className="text-center text-4xl md:text-5xl font-bold mb-6 md:mb-14
+        className="text-center text-4xl md:text-5xl font-bold mb-4 md:mb-10
          bg-clip-text font-changa text-transparent bg-gradient-to-r from-gray-400 via-gray-800 to-gray-400 bg-clip-border"
       >
         CERTIFICATIONS
