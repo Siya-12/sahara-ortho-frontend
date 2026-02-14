@@ -22,9 +22,65 @@
 />
 
     <title>Sahara Ortho</title>
+
+   <style>
+  #preloader {
+    position: fixed;
+    inset: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+
+  .ecg-container {
+    width: 300px;
+  }
+
+  .ecg {
+    width: 100%;
+    height: 100px;
+  }
+
+  .ecg polyline {
+    fill: none;
+    stroke: #8f0808; /* Medical Green */
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 1.8s linear infinite;
+  }
+
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+</style>
+
+
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+ <body>
+  <div id="preloader">
+    <div class="ecg-container">
+      <svg viewBox="0 0 500 100" class="ecg">
+        <polyline
+          points="0,50 60,50 80,30 100,70 120,10 150,90 180,40 210,60 240,50 500,50"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+
 </html>

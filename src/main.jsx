@@ -12,3 +12,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 )
 
+window.addEventListener("load", () => {
+  const loader = document.getElementById("preloader");
+  if (loader) {
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+  }
+});
+
