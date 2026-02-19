@@ -1,7 +1,7 @@
 import ContactBg from "../assets/img/bg-contact.png";
 export default function ContactUs() {
   return (
-    <section className="min-h-[60vh] md:min-h-screen px-6 py-8 md:py-16" style={{backgroundImage:`url(${ContactBg})`}}>
+    <section className="min-h-[60vh] md:min-h-screen px-6 py-6 md:py-6" style={{backgroundImage:`url(${ContactBg})`}}>
       
       {/* Heading */}
       <h2

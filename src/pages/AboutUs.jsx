@@ -7,7 +7,7 @@ export default function AboutUs() {
   const images = [About1, About2, About3, About4];
 
   return (
-    <section className="py-5 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <section className="py-5 bg-gradient-to-br from-sky-100 via-white to-blue-100">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
@@ -19,7 +19,7 @@ export default function AboutUs() {
 
         {/* Video */}
         <div className="flex justify-center mb-12">
-  <div className="w-full md:w-3/4 aspect-video">
+  <div className="w-full md:w-2/4 aspect-video">
     <video
       src="/videos/vdo1.mp4"
       autoPlay

@@ -30,12 +30,12 @@ export default function WhyUs()
   ];
 
   return(
-     <section className="px-2 py-16 bg-center bg-cover bg-no-repeat bg-gray-200">
-    {/*  style={{ backgroundImage: `url(${heroImg})`}} */}
+     <section className="px-2 py-6 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    {/* style={{ backgroundImage: `url(${heroImg})`}} */}
 
       {/* Heading */}
       <h1
-        className="text-center text-4xl md:text-5xl font-bold mb-14
+        className="text-center text-4xl md:text-5xl font-bold mb-10
          bg-clip-text font-changa bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600
     bg-clip-border text-transparent"
       > How are we different?
@@ -51,7 +51,7 @@ export default function WhyUs()
   p-4 flex flex-col items-center text-center"
 >
   {/* Icon */}
-  <div className="w-38 h-16 flex items-center justify-center mb-3 
+  <div className="w-38 h-20 flex items-center justify-center mb-3 
       transition-transform duration-300 group-hover:scale-110">
     <img
       src={item.icon}
@@ -66,7 +66,7 @@ export default function WhyUs()
   </h3>
 
   {/* Description */}
-  <p className="text-xs md:text-sm text-gray-600 leading-snug line-clamp-4">
+  <p className="text-xs md:text-sm text-gray-600 leading-snug ">
     {item.desc}
   </p>
 </div>

@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
         <Topbar />
         <Navbar />
       </div>
-        <main className="mt-[2px] md:mt-[10px]">
+        <main className="mt-0">
           {children}
           <Outlet />
         </main>

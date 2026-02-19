@@ -19,11 +19,11 @@ export default function Certification() {
   ];
 
   return (
-    <section className="min-h-[60vh] md:min-h-screen bg-gradient-to-br from-slate-200 to-white px-5 py-8">
+    <section className="min-h-[60vh] md:min-h-screen bg-gradient-to-br from-sky-100 via-white to-blue-100 px-5 md:py-2 py-8">
       
       {/* Heading */}
       <h1
-        className="text-center text-4xl md:text-5xl font-bold mb-4 md:mb-10
+        className="text-center text-4xl md:text-5xl font-bold mb-2 md:mb-5
          bg-clip-text font-changa text-transparent bg-gradient-to-r from-gray-400 via-gray-800 to-gray-400 bg-clip-border"
       >
         CERTIFICATIONS
@@ -32,24 +32,31 @@ export default function Certification() {
       {/* Cards */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {certificates.map((cert, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
-            transition duration-300 p-5 pb-8 md:pb-5 pt-8"
-          >
-            <img
-              src={cert.img}
-              alt={cert.title}
-              className="rounded-l w-full h-full object-cover"
-            />
+         <div
+  key={index}
+  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
+  transition duration-300 overflow-hidden flex flex-col"
+>
+  {/* Image */}
+  <div className="w-full h-full overflow-hidden">
+    <img
+      src={cert.img}
+      alt={cert.title}
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-            <p
-              className="pt-4 mt-4 text-center text-gray-700 font-extrabold"
-              style={{ fontFamily: "Merriweather, sans-serif" }}
-            >
-              {cert.title}
-            </p>
-          </div>
+  {/* Title Inside Same Box */}
+  <div className="p-5 text-center">
+    <p
+      className="text-gray-800 font-semibold text-sm md:text-base"
+      style={{ fontFamily: "Merriweather, serif" }}
+    >
+      {cert.title}
+    </p>
+  </div>
+</div>
+
         ))}
       </div>
     </section>

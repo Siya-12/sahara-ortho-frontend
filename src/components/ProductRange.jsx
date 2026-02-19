@@ -77,7 +77,7 @@ export default function ProductRange() {
   ];
 
   return (
-    <section className="bg-slate-50 py-16 px-6">
+    <section className="bg-gradient-to-br from-sky-100 via-white to-blue-100 py-16 px-6">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-14">
         <h2 className="mt-2 text-center text-4xl md:text-5xl font-bold
